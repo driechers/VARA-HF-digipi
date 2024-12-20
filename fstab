@@ -1,0 +1,9 @@
+proc                  /proc           proc    defaults             0       0
+PARTUUID=60bac01f-01  /boot/firmware  vfat    defaults             0       2
+PARTUUID=60bac01f-02  /               ext4    defaults,noatime,rw  0       1
+# change ro to rw, to make filesystem writeable                ^^
+
+# ramdiscs                          
+tmpfs /var/tmp tmpfs nodev,nosuid,size=200M 0 0                 
+tmpfs /var/log tmpfs nodev,nosuid,size=10M 0 0                 
+tmpfs /tmp     tmpfs nodev,nosuid,size=200M 0 0
